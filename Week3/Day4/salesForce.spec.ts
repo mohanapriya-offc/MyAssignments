@@ -18,7 +18,6 @@ test("Create Opportunity", async({page})=>{
     await page.locator("//button[@role='combobox']").nth(1).click()
     await page.locator("//lightning-base-combobox-item[@data-value='Needs Analysis']").click()
     await page.locator("//button[text()='Save']").nth(1).click()
-    await expect(page.getByRole('heading',{name:'Mohana'})).toBeVisible()
-
+    await expect(page.locator("//lightning-formatted-text[text()='Mohana']")).toBeVisible()
 }
 )
